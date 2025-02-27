@@ -1,9 +1,13 @@
 import React from 'react';
-
+import Home from "./Pages/Home"
+import Nav from './Components/Nav';
 
 function App() {
   return ( <div>
-    <h1>teste</h1>
+    <header>
+      <Nav />
+    </header>
+    <Home />
   </div>
   );
 }
