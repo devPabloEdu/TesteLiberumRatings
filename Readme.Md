@@ -67,4 +67,5 @@ Desta forma o repositório com o código do projeto vai ser baixado em sua máqu
 2 - Após rodar o backend com sucesso, você deve navegar utilizando o comando CD em seu terminal até a pasta cadastro-empresas em seu frontend, e utilizar o comando npm start.
 
 Prontinho, feito isso o projeto já vai estar rodando normalmente !!
+
 <img align="right" width="400" height="400" src="https://media.giphy.com/media/pUVOeIagS1rrqsYQJe/giphy.gif?cid=790b76117udmuq9aunfhru4lank6nk0x0u5ywrhcqukzv19t&ep=v1_gifs_search&rid=giphy.gif&ct=g">
