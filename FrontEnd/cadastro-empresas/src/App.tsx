@@ -5,6 +5,7 @@ import Nav from './Components/Nav';
 import EmpresaDetails from './Components/EmpresaDetails';
 import EmpresaForm from "./Components/EmpresaForm";
 import Footer from './Components/Footer';
+import EmpresaEdit from './Components/EditarEmpresa';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" Component={Home}/>
         <Route path="/empresa/:Id" element={<EmpresaDetails />} />
+        <Route path="/editar/:Id" element={<EmpresaEdit />} />
         <Route path='/CriarEmpresa' Component={EmpresaForm}/>
       </Routes>
       <footer>
