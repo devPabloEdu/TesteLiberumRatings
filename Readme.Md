@@ -1,5 +1,9 @@
 ## Guia para Rodar o Projeto do cadastro de Empresas (Frontend e Backend)
 --------------------------------------------------------------------------
+Tecnologias utilizadas :
+- **Frontend**: React, TypeScript
+- **Backend**: .NET Core (C#)
+- **Banco de Dados**: SQL SERVER/EXPRESS
 
 ## Pré requisitos :
 - Antes de rodar o projeto você precisa instalar os seguintes programas
