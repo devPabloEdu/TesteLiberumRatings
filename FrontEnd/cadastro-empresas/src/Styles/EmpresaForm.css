@@ -58,4 +58,6 @@ input{
     background-color: var(--backgroundLaranja);
     color: whitesmoke;
     height: 20px;
+    border: none;
+    border-radius: 5px;
 }

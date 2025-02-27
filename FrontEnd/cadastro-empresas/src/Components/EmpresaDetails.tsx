@@ -1,35 +1,62 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const EmpresaDetails = () => {
-  const { Id } = useParams();
+  const { Id } = useParams<{ Id: string }>(); // Captura o ID da URL como string
   const [empresa, setEmpresa] = useState<any>(null);
+  const navigate = useNavigate();
 
-
+  // Função para buscar a empresa específica
   useEffect(() => {
-    axios.get(`http://localhost:5039/api/Empresas/${Id}`)
-      .then(response => setEmpresa(response.data))
-      .catch(error => console.error("Erro ao buscar empresa", error));
+    if (!Id) {
+      console.error("ID da empresa não encontrado.");
+      return;
+    }
+
+    const fetchEmpresa = async () => {
+      try {
+        console.log("Buscando empresa com ID:", Id);
+        const response = await axios.get(`http://localhost:5039/api/empresas/${Id}`);
+        setEmpresa(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar a empresa', error);
+      }
+    };
+
+    fetchEmpresa();
   }, [Id]);
 
+  // Função para deletar a empresa
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5039/api/Empresas/${Id}`);
+      await axios.delete(`http://localhost:5039/api/empresas/${Id}`);
+      navigate('/'); // Redireciona para a página inicial após a exclusão
     } catch (error) {
-      console.error("Erro ao deletar empresa", error);
+      console.error('Erro ao deletar a empresa', error);
     }
   };
 
-  if (!empresa) return <div>Carregando...</div>;
+  // Função para editar a empresa
+  const handleEdit = () => {
+    navigate(`/editar/${empresa.id}`);
+  };
+
+  // Exibe "Carregando..." enquanto a empresa não é carregada
+  if (!empresa) {
+    return <div>Carregando...</div>;
+  }
 
   return (
     <div>
       <h1>Detalhes da Empresa</h1>
-      <p>CNPJ: {empresa.cnpj}</p>
-      <p>Razão Social: {empresa.razaoSocial}</p>
-      <p>Status: {empresa.status ? "Ativo" : "Inativo"}</p>
-      <button onClick={() => (`/editar/${empresa.Id}`)}>Editar</button>
+      <p><strong>Razão Social:</strong> {empresa.razaoSocial}</p>
+      <p><strong>CNPJ:</strong> {empresa.cnpj}</p>
+      <p><strong>Data de Registro:</strong> {empresa.criadoEm}</p>
+      <p><strong>Status:</strong> {empresa.status ? 'Ativo' : 'Inativo'}</p>
+
+      {/* Botões de Edição e Deletação */}
+      <button onClick={handleEdit}>Editar</button>
       <button onClick={handleDelete}>Deletar</button>
     </div>
   );

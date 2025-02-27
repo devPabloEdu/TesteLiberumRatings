@@ -35,7 +35,7 @@ const EmpresaList = () => {
                   <td>{empresa.razaoSocial}</td>
                   <td>{empresa.status ? "Ativo" : "Inativo"}</td>
                 <td>
-                    <Link to={`/empresa/${empresa.Id}`}>Ver detalhes</Link>
+                    <Link to={`/empresa/${empresa.id}`}>Ver detalhes</Link>
                 </td>
                 </tr>
               ))}
