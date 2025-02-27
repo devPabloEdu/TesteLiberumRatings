@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+.EditarButton{
+    background-color: rgb(104, 153, 31);
+}
+.EditarButton:hover{
+    background-color: rgb(68, 99, 21);
+}
+.DeletarButton{
+    background-color: rgb(114, 8, 8);
+}
+.DeletarButton:hover{
+    background-color: rgb(66, 5, 5);
+}

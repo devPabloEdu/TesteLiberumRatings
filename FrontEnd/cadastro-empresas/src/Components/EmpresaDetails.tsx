@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "../Styles/EmpresaDetails.css"
 
 const EmpresaDetails = () => {
   const { Id } = useParams<{ Id: string }>(); // Captura o ID da URL como string
@@ -55,9 +56,11 @@ const EmpresaDetails = () => {
       <p><strong>Data de Registro:</strong> {empresa.criadoEm}</p>
       <p><strong>Status:</strong> {empresa.status ? 'Ativo' : 'Inativo'}</p>
 
-      {/* Botões de Edição e Deletação */}
-      <button onClick={handleEdit}>Editar</button>
-      <button onClick={handleDelete}>Deletar</button>
+
+      <div className='buttonsContainer'>
+        <button onClick={handleEdit} className='EditarButton'>Editar</button>
+        <button onClick={handleDelete} className='DeletarButton'>Deletar</button>
+      </div>
     </div>
   );
 };

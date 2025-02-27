@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-// Definindo o tipo para Empresa
+
+
 interface EmpresaModel {
   id: number;
   razaoSocial: string;
@@ -13,7 +14,7 @@ interface EmpresaModel {
 }
 
 const EmpresaEdit = () => {
-  const { Id } = useParams<{ Id: string }>(); // Captura o ID da URL como string
+  const { Id } = useParams<{ Id: string }>(); 
   const [empresa, setEmpresa] = useState<EmpresaModel | null>(null);
   const navigate = useNavigate();
 
@@ -46,10 +47,7 @@ const EmpresaEdit = () => {
     }
 
     try {
-      // Atualizando a empresa no backend
       await axios.put(`http://localhost:5039/api/empresas/${empresa.id}`, empresa);
-      
-      // Redireciona para a página de detalhes da empresa após salvar
       navigate(`/empresa/${empresa.id}`);
     } catch (error) {
       console.error('Erro ao editar a empresa', error);
