@@ -24,7 +24,7 @@ Você deve acessar o link https://nodejs.org/en/download e fazer o download da v
 Durante a instalação, certifique-se de selecionar a opção para adicionar o `npm` ao `PATH`.
 
 5 (Opcional) - Terminal
-Você pode instalar o terminal que utilizei no desenvolvimento acessando a MICROSOFT STORE e digitando Terminal, a opção correta é a da foto abaixo.
+Você pode instalar o terminal que utilizei no desenvolvimento acessando a MICROSOFT STORE e digitando Terminal.
 
 6 - GIT
 Para conseguir clonar meu repositório de forma local em sua máquina, você deve baixar, instalar e configurar o GIT antes de seguirmos os próximos passos, link : https://git-scm.com/downloads
@@ -37,9 +37,9 @@ Desta forma o repositório com o código do projeto vai ser baixado em sua máqu
 ## Após realizar todos os passos anteriores, é hora de colocarmos a mão na massa
 ## Backend
 
-1 - primeiramente você deve abrir seu terminal ou o terminal de seu vscode (ctrl + "), e navegar com o comando cd até a pasta backend e após isso com o comando cd navegue até a pasta da api conforme evidenciei nas imagens abaixo
+1 - primeiramente você deve abrir seu terminal ou o terminal de seu vscode (ctrl + "), e navegar com o comando cd até a pasta backend e após isso com o comando cd navegue até a pasta da api.
 
-2 - feito isso, vamos instalar agora o framework necessário para realizarmos as migrações em nosso banco de dados, utilize o comando dotnet add package Microsoft.EntityFrameworkCore   para instalar o pacote necessário em seu projeto, conforme evidenciado abaixo
+2 - feito isso, vamos instalar agora o framework necessário para realizarmos as migrações em nosso banco de dados, utilize o comando dotnet add package Microsoft.EntityFrameworkCore   para instalar o pacote necessário em seu projeto
 
 3 - Após isso, se faz necessário que utilize o comando dotnet add package Microsoft.EntityFrameworkCore.SqlServer nesta mesma pasta, para adicionarmos o pacote de nosso banco de dados, após esse comando, utilize também o comando  dotnet add package Microsoft.EntityFrameworkCore.Tools   para adicionar as suas ferramentas necessárias para o projeto
 
@@ -67,3 +67,4 @@ Desta forma o repositório com o código do projeto vai ser baixado em sua máqu
 2 - Após rodar o backend com sucesso, você deve navegar utilizando o comando CD em seu terminal até a pasta cadastro-empresas em seu frontend, e utilizar o comando npm start.
 
 Prontinho, feito isso o projeto já vai estar rodando normalmente !!
+<img align="right" width="400" height="400" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.construsitebrasil.com%2Fblog%2Fver-post%2F36%2Fprogramador-o-que-faz-este-profissional-%2F%2F&psig=AOvVaw2HOHaYXOIGu7pwdHOVTLnk&ust=1740732392595000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMC1utK744sDFQAAAAAdAAAAABAE">
