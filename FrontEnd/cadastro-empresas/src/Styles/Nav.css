@@ -16,18 +16,21 @@ nav{
 nav img{
     padding: 10px;
 }
-nav a{
+.CriarEmpresa{
     color: whitesmoke;
     text-decoration: none;
     font-size: 2em;
     background-color: #3760a7;
     padding: 10px;
     font-family: "Barlow", serif;
-    font-weight: 600;
+    font-weight: 800;
     font-style: normal;
+    margin: 0;
+    border: #3760a7 solid 2px;
 }
-nav a:hover{
+.CriarEmpresa:hover{
     cursor: pointer;
     background-color: #162744;
     transition: ease-in-out 0.5s;
+    border: #162744 solid 2px;
 }
