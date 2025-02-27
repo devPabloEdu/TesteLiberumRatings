@@ -13,7 +13,7 @@ interface EmpresaModel {
   atualizadoEm: string;
 }
 
-const EmpresaEdit = () => {
+const EditarEmpresa = () => {
   const { Id } = useParams<{ Id: string }>(); 
   const [empresa, setEmpresa] = useState<EmpresaModel | null>(null);
   const navigate = useNavigate();
@@ -114,4 +114,4 @@ const EmpresaEdit = () => {
   );
 };
 
-export default EmpresaEdit;
+export default EditarEmpresa;
