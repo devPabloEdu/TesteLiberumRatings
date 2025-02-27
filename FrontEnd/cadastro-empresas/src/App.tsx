@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home"
 import Nav from './Components/Nav';
 import EmpresaDetails from './Components/EmpresaDetails';
+import EmpresaForm from "./Components/EmpresaForm";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" Component={Home}/>
         <Route path="/empresa/:Id" Component={EmpresaDetails}/>
+        <Route path='/CriarEmpresa' Component={EmpresaForm}/>
       </Routes>
     </Router>
   </div>

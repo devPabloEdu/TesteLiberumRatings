@@ -6,6 +6,8 @@
 :root{
     --backgroundLaranja: #f60;
     --backgroundLaranjaEscuro: rgb(175, 73, 5);
+    --backgroundAzul: #3760a7;
+    --backgtoundAZULescuro: #162744;
 }
 nav{
     background-color: var(--backgroundLaranjaEscuro);
@@ -20,17 +22,17 @@ nav img{
     color: whitesmoke;
     text-decoration: none;
     font-size: 2em;
-    background-color: #3760a7;
+    background-color: var(--backgroundAzul);
     padding: 10px;
     font-family: "Barlow", serif;
     font-weight: 800;
     font-style: normal;
     margin: 0;
-    border: #3760a7 solid 2px;
+    border: var(--backgroundAzul) solid 2px;
 }
 .CriarEmpresa:hover{
     cursor: pointer;
-    background-color: #162744;
+    background-color: var(--backgtoundAZULescuro);
     transition: ease-in-out 0.5s;
-    border: #162744 solid 2px;
+    border: var(--backgtoundAZULescuro) solid 2px;
 }
